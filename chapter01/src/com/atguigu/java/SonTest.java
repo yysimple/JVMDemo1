@@ -21,7 +21,6 @@ class Father {
 
 class Son extends Father {
     int x = 30;
-//    float x = 30.1F;
     public Son() {
         this.print();
         x = 40;
