@@ -6,7 +6,7 @@ package com.atguigu.java2;
  */
 public class MyClassLoaderTest {
     public static void main(String[] args) {
-        MyClassLoader loader = new MyClassLoader("d:/");
+        MyClassLoader loader = new MyClassLoader("F:\\personal-project\\jvm\\JVMDemo1\\chapter04\\src\\com\\atguigu\\java1\\Demo1.class");
 
         try {
             Class clazz = loader.loadClass("Demo1");

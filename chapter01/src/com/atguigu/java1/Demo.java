@@ -7,9 +7,9 @@ package com.atguigu.java1;
 public class Demo {
     private int num = 1;
 
-    public int add(){
+    public int add(int a){
+        int b = 1;
         num = num + 2;
         return num;
-
     }
 }

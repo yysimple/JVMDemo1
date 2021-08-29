@@ -19,6 +19,7 @@ public class MyClassLoader extends ClassLoader {
         this.rootDir = rootDir;
     }
 
+    @Override
     protected Class<?> findClass(String className) throws ClassNotFoundException {
         Class clazz = this.findLoadedClass(className);
         FileChannel fileChannel = null;
@@ -51,14 +52,16 @@ public class MyClassLoader extends ClassLoader {
                 e.printStackTrace();
             } finally {
                 try {
-                    if (fileChannel != null)
+                    if (fileChannel != null) {
                         fileChannel.close();
+                    }
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
                 try {
-                    if (outChannel != null)
+                    if (outChannel != null) {
                         outChannel.close();
+                    }
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
