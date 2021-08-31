@@ -30,6 +30,10 @@ public class LoadAndStoreTest {
         int f = 32768;
     }
 
+    public void allShow(){
+        
+    }
+
     public void constLdc() {
         long a1 = 1;
         long a2 = 2;
