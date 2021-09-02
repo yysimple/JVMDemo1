@@ -5,13 +5,13 @@ import java.util.Date;
 /**
  * @author shkstart
  * @create 2020-09-07 21:26
- *
+ * <p>
  * 指令1：加载与存储指令
  */
 public class LoadAndStoreTest {
 
     //1.局部变量压栈指令
-    public void load(int num, Object obj,long count,boolean flag,short[] arr) {
+    public void load(int num, Object obj, long count, boolean flag, short[] arr) {
         System.out.println(num);
         System.out.println(obj);
         System.out.println(count);
@@ -30,8 +30,15 @@ public class LoadAndStoreTest {
         int f = 32768;
     }
 
-    public void allShow(){
-        
+    public void allShow() {
+        byte a = 1;
+        short b = 1;
+        boolean c = true;
+        char d = 1;
+        int e = 1;
+        float f = 1;
+        long g = 1;
+        double h = 1;
     }
 
     public void constLdc() {
@@ -62,5 +69,6 @@ public class LoadAndStoreTest {
             String s = "Hello, World";
         }
     }
+
 
 }
