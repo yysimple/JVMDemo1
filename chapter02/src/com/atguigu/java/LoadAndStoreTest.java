@@ -19,6 +19,8 @@ public class LoadAndStoreTest {
         System.out.println(arr);
     }
 
+    int aa;
+
     //2.常量入栈指令
     public void pushConstLdc() {
         int i = -1;
@@ -28,6 +30,9 @@ public class LoadAndStoreTest {
         int d = 128;
         int e = 32767;
         int f = 32768;
+
+        aa = 2;
+
     }
 
     public void allShow() {
@@ -70,5 +75,11 @@ public class LoadAndStoreTest {
         }
     }
 
+    public static void main(String[] args) {
+        byte b = -1;
+        int a = b;
+        /*System.out.println("a: " + a);
+        System.out.println("b: " + b);*/
+    }
 
 }
