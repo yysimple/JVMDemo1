@@ -137,5 +137,9 @@ public class ClassCastTest {
         float h = 1213213123132132.1332123f;
         int hi = (int) h;
         System.out.println("hi: " + hi);
+        float maxF = Float.MAX_VALUE;
+        System.out.println("float max: " + maxF);
+        int maxF2I = (int) maxF;
+        System.out.println("float max to int: " + maxF2I);
     }
 }

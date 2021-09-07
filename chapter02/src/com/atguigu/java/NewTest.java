@@ -41,7 +41,9 @@ public class NewTest {
         System.out.println(Order.name);
     }
 
-    //3.数组操作指令
+    /**
+     * 数组操作指令
+     */
     public void setArray() {
         int[] intArray = new int[10];
         intArray[3] = 20;
@@ -57,7 +59,12 @@ public class NewTest {
         System.out.println(arr.length);
     }
 
-    //4.类型检查指令
+    /**
+     * 类型检查指令
+     *
+     * @param obj
+     * @return
+     */
     public String checkCast(Object obj) {
         if (obj instanceof String) {
             return (String) obj;
@@ -67,6 +74,29 @@ public class NewTest {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Order {
     int id;
