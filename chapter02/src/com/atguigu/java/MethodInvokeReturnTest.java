@@ -5,13 +5,15 @@ import java.util.Date;
 /**
  * @author shkstart
  * @create 2020-09-08 9:35
- *
+ * <p>
  * 指令5：方法调用与返回指令
  */
 public class MethodInvokeReturnTest {
 
-    //方法调用指令:invokespecial:静态分派
-    public void invoke1(){
+    /**
+     * 方法调用指令:invokespecial:静态分派
+     */
+    public void invoke1() {
         //情况1：类实例构造器方法：<init>()
         Date date = new Date();
 
@@ -22,60 +24,65 @@ public class MethodInvokeReturnTest {
         methodPrivate();
     }
 
-    private void methodPrivate(){
+    private void methodPrivate() {
 
     }
+
     //方法调用指令:invokestatic:静态分派
-    public void invoke2(){
+    public void invoke2() {
         methodStatic();
     }
-    public static void methodStatic(){
+
+    public static void methodStatic() {
 
     }
 
     //方法调用指令:invokeinterface
-    public void invoke3(){
+    public void invoke3() {
         Thread t1 = new Thread();
-        ((Runnable)t1).run();
+        ((Runnable) t1).run();
 
         Comparable<Integer> com = null;
         com.compareTo(123);
     }
 
     //方法调用指令:invokeVirtual:动态分派
-    public void invoke4(){
+    public void invoke4() {
         System.out.println("hello");
 
         Thread t1 = null;
         t1.run();
+        returnInt();
     }
+
     //方法的返回指令
-    public int returnInt(){
+    public int returnInt() {
         int i = 500;
         return i;
     }
 
-    public double returnDouble(){
+    public double returnDouble() {
         return 0.0;
     }
 
-    public String returnString(){
+    public String returnString() {
         return "hello,world";
     }
 
-    public int[] returnArr(){
+    public int[] returnArr() {
         return null;
     }
-    public float returnFloat(){
+
+    public float returnFloat() {
         int i = 10;
         return i;
     }
 
-    public byte returnByte(){
+    public byte returnByte() {
         return 0;
     }
 
-    public void methodReturn(){
+    public void methodReturn() {
         int i = returnByte();
     }
 
