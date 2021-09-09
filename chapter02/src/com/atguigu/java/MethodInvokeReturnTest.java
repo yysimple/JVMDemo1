@@ -16,7 +16,6 @@ public class MethodInvokeReturnTest {
     public void invoke1() {
         //情况1：类实例构造器方法：<init>()
         Date date = new Date();
-
         Thread t1 = new Thread();
         //情况2：父类的方法
         super.toString();
@@ -28,7 +27,9 @@ public class MethodInvokeReturnTest {
 
     }
 
-    //方法调用指令:invokestatic:静态分派
+    /**
+     * 方法调用指令:invokestatic:静态分派
+     */
     public void invoke2() {
         methodStatic();
     }
@@ -37,16 +38,19 @@ public class MethodInvokeReturnTest {
 
     }
 
-    //方法调用指令:invokeinterface
+    /**
+     * 方法调用指令:invokeinterface
+     */
     public void invoke3() {
         Thread t1 = new Thread();
         ((Runnable) t1).run();
-
         Comparable<Integer> com = null;
         com.compareTo(123);
     }
 
-    //方法调用指令:invokeVirtual:动态分派
+    /**
+     * 方法调用指令:invokeVirtual:动态分派
+     */
     public void invoke4() {
         System.out.println("hello");
 
@@ -55,7 +59,11 @@ public class MethodInvokeReturnTest {
         returnInt();
     }
 
-    //方法的返回指令
+    /**
+     * 方法的返回指令
+     *
+     * @return
+     */
     public int returnInt() {
         int i = 500;
         return i;
