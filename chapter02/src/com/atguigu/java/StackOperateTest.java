@@ -10,10 +10,13 @@ public class StackOperateTest {
 
     public void print(){
         Object obj = new Object();
-//        String info = obj.toString();
         obj.toString();
+        String info = obj.toString();
     }
-    //类似的
+
+    /**
+     * 类似的
+     */
     public void foo(){
         bar();
     }
