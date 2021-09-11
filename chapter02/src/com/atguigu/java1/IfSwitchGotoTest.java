@@ -1,5 +1,7 @@
 package com.atguigu.java1;
 
+import org.junit.Test;
+
 /**
  * @author shkstart
  * @create 2020-09-08 10:38
@@ -7,28 +9,37 @@ package com.atguigu.java1;
  * 指令7：控制转移指令
  */
 public class IfSwitchGotoTest {
-    //1.条件跳转指令
-    public void compare1(){
+    /**
+     * 1.条件跳转指令
+     */
+    public void compare1() {
         int a = 0;
-        if(a != 0){
+        if (a != 0) {
             a = 10;
-        }else{
+        } else {
             a = 20;
         }
     }
-    public boolean compareNull(String str){
-        if(str == null){
+
+    public boolean compareNull(String str) {
+        if (str == null) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
-    //结合比较指令
+
+    /**
+     * 结合比较指令
+     */
+    @Test
     public void compare2() {
         float f1 = 9;
         float f2 = 10;
-        System.out.println(f1 < f2);//true
+        //true
+        System.out.println(f1 < f2);
     }
+
     public void compare3() {
         int i1 = 10;
         long l1 = 20;
@@ -43,12 +54,15 @@ public class IfSwitchGotoTest {
         }
     }
 
-    //2.比较条件跳转指令
-    public void ifCompare1(){
+    /**
+     * 2.比较条件跳转指令
+     */
+    public void ifCompare1() {
         int i = 10;
         int j = 20;
         System.out.println(i > j);
     }
+
     public void ifCompare2() {
         short s1 = 9;
         byte b1 = 10;
@@ -58,14 +72,21 @@ public class IfSwitchGotoTest {
     public void ifCompare3() {
         Object obj1 = new Object();
         Object obj2 = new Object();
-        System.out.println(obj1 == obj2);//false
-        System.out.println(obj1 != obj2);//true
+        //false
+        System.out.println(obj1 == obj2);
+        //true
+        System.out.println(obj1 != obj2);
     }
 
-    //3.多条件分支跳转
-    public void swtich1(int select){
+
+    /**
+     * 3.多条件分支跳转
+     *
+     * @param select
+     */
+    public void swtich1(int select) {
         int num;
-        switch(select){
+        switch (select) {
             case 1:
                 num = 10;
                 break;
@@ -80,9 +101,10 @@ public class IfSwitchGotoTest {
         }
 
     }
-    public void swtich2(int select){
+
+    public void swtich2(int select) {
         int num;
-        switch(select){
+        switch (select) {
             case 100:
                 num = 10;
                 break;
@@ -96,17 +118,28 @@ public class IfSwitchGotoTest {
                 num = 40;
         }
     }
-    //jdk7新特性：引入String类型
-    public void swtich3(String season){
-        switch(season){
-            case "SPRING":break;
-            case "SUMMER":break;
-            case "AUTUMN":break;
-            case "WINTER":break;
+
+    /**
+     * jdk7新特性：引入String类型
+     *
+     * @param season
+     */
+    public void swtich3(String season) {
+        switch (season) {
+            case "SPRING":
+                break;
+            case "SUMMER":
+                break;
+            case "AUTUMN":
+                break;
+            case "WINTER":
+                break;
         }
     }
 
-    //4.无条件跳转指令
+    /**
+     * 4.无条件跳转指令
+     */
     public void whileInt() {
         int i = 0;
         while (i < 100) {
@@ -117,7 +150,7 @@ public class IfSwitchGotoTest {
 
     public void whileDouble() {
         double d = 0.0;
-        while(d < 100.1) {
+        while (d < 100.1) {
             String s = "atguigu.com";
             d++;
         }
@@ -131,26 +164,32 @@ public class IfSwitchGotoTest {
 
     }
 
-    //思考：如下两个方法的操作有何不同？
-    public void whileTest(){
+    /**
+     * 思考：如下两个方法的操作有何不同？
+     */
+    public void whileTest() {
         int i = 1;
-        while(i <= 100){
+        while (i <= 100) {
 
             i++;
         }
         //可以继续使用i
     }
-    public void forTest(){
-        for(int i = 1;i <= 100;i++){
+
+    public void forTest() {
+        for (int i = 1; i <= 100; i++) {
 
         }
         //不可以继续使用i
     }
-    //更进一步
-    public void doWhileTest(){
+
+    /**
+     * 更进一步
+     */
+    public void doWhileTest() {
         int i = 1;
-        do{
+        do {
             i++;
-        }while(i <= 100);
+        } while (i <= 100);
     }
 }
