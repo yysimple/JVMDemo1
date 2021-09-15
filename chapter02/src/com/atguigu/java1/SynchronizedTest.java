@@ -9,7 +9,7 @@ package com.atguigu.java1;
 public class SynchronizedTest {
 
     private int i = 0;
-    public void add(){
+    public synchronized void add(){
         i++;
     }
 
