@@ -9,6 +9,23 @@ import java.io.File;
  * 指令4：对象、数组的创建与访问指令
  */
 public class NewTest {
+
+    public Order order;
+    public static final String staticFinalName = "staticFinalName";
+    public static String staticName = "staticName";
+    public String normalName = "normalName";
+
+    /**
+     * 测试字段获取情况
+     */
+    public void testOpeField() {
+        System.out.println(NewTest.staticFinalName);
+        System.out.println(NewTest.staticName);
+        System.out.println(normalName);
+        staticName = "aaaa";
+        order = new Order();
+    }
+
     /**
      * 创建指令
      */
@@ -74,28 +91,6 @@ public class NewTest {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Order {
