@@ -1,5 +1,7 @@
 package com.atguigu.java;
 
+import com.sun.org.apache.xpath.internal.operations.Or;
+
 import java.io.File;
 
 /**
@@ -14,6 +16,8 @@ public class NewTest {
     public static final String staticFinalName = "staticFinalName";
     public static String staticName = "staticName";
     public String normalName = "normalName";
+    public final String finalName = "123";
+
 
     /**
      * 测试字段获取情况
@@ -23,7 +27,18 @@ public class NewTest {
         System.out.println(NewTest.staticName);
         System.out.println(normalName);
         staticName = "aaaa";
+        System.out.println(finalName);
         order = new Order();
+    }
+
+    public void testInstanceOf() {
+        SubOrder subOrder = new SubOrder();
+        if (subOrder instanceof Order) {
+            System.out.println(true);
+        }
+        Order order = subOrder;
+        Order order1 = new Order();
+        subOrder = (SubOrder) order1;
     }
 
     /**
@@ -96,4 +111,8 @@ public class NewTest {
 class Order {
     int id;
     static String name;
+}
+
+class SubOrder extends Order {
+
 }
