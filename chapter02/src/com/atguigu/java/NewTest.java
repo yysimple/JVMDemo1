@@ -89,6 +89,9 @@ public class NewTest {
 
         double[] arr = new double[10];
         System.out.println(arr.length);
+        Object[] objArray = new Object[10];
+        objArray[1] = new Object();
+        int length = objArray.length;
     }
 
     /**
